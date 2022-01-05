@@ -1,0 +1,22 @@
+﻿@model MvcKutuphaneProjesi.Models.Entity.TBLKATEGORI
+@{
+    ViewBag.Title = "KategoriGetir";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+<form class="form-group" method="post" action="/Kategori/KategoriGuncelle/" >
+    <div style="margin-bottom:20px"></div>
+
+    <label>KATEGORİ ID</label>
+    <input class="form-control" name="kategori_id" value="@Model.kategori_id" />
+    <br />
+    <label>KATEGORİ ADI</label>
+    <input class="form-control" name="kategori_ad" value="@Model.kategori_ad" />
+    <br />
+    <button class="btn btn-warning">Güncelle</button>
+</form>
+    
+    
+
+

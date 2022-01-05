@@ -1,0 +1,24 @@
+﻿@model MvcKutuphaneProjesi.Models.Entity.TBLUYELER
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/KullaniciLayout.cshtml";
+}
+
+<h1 style="font-family:'Times New Roman'" class="mb-4">@TempData["ad"].ToString() @TempData["soyad"].ToString()</h1>
+
+
+<div class="form-group">
+    <label style="font-size: 25px; font-family: 'Times New Roman'; color: #f8b739" class="font-weight-bold" for="Email">Email </label>
+    <label class="form-check" style="font-family:'Times New Roman';font-size:22px">@Session["mail"].ToString()</label>
+    <label style="font-size: 25px; font-family: 'Times New Roman'; color: #f8b739" class="font-weight-bold" for="Email">Kullanıcı Adı </label>
+    <label class="form-check" style="font-family: 'Times New Roman'; font-size: 22px">@TempData["kullanıcıadı"].ToString()</label>
+    <label style="font-size: 25px; font-family: 'Times New Roman'; color: #f8b739" class="font-weight-bold" for="Email">Şifre </label>
+    <label class="form-check" style="font-family: 'Times New Roman'; font-size: 22px">@TempData["sifre"].ToString()</label>
+    <label style="font-size: 25px; font-family: 'Times New Roman'; color: #f8b739" class="font-weight-bold" for="Email">Okul </label>
+    <label class="form-check" style="font-family: 'Times New Roman'; font-size: 22px">@TempData["okul"].ToString()</label>
+    <br />
+</div>
+
+
+
+

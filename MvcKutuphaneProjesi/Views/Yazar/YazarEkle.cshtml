@@ -1,0 +1,25 @@
+﻿@model MvcKutuphaneProjesi.Models.Entity.TBLYAZAR
+@{
+    ViewBag.Title = "YazarEkle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<form class="form-group" method="post">@*Html helper ile form doldurma işlemi*@
+    <div></div>
+    <div style="margin-top:15px">
+        <label>Yazar Adı</label>
+        @Html.TextBoxFor(x => x.yazar_ad, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px">
+        <label>Yazar Soyadı</label>
+        @Html.TextBoxFor(x=>x.yazar_soyad,new {@class ="form-control" })
+    </div>
+    <div style="margin-top:15px">
+        <label>Yazar Detay</label>
+        @Html.TextAreaFor(x=>x.yazar_detay,new {@class ="form-control" })
+    </div>
+    <button style="margin-top:15px" class="btn btn-info">Yazar Ekle</button>
+    @*javascript ile yazar eklendi alerti verilecek*@
+</form>
+
+

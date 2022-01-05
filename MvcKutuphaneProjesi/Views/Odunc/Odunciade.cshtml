@@ -1,0 +1,44 @@
+﻿@model MvcKutuphaneProjesi.Models.Entity.TBLHAREKET
+@{
+    ViewBag.Title = "Odunciade";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@using (Html.BeginForm("OduncGuncelle", "Odunc", FormMethod.Post))
+{
+    <div style="margin-top:15px"></div>
+    <label>HAREKET ID</label>
+    @Html.TextBoxFor(p => p.hareket_id, new { @class = "form-control" })
+    <br />
+    <label>KİTAP AD</label>
+
+    @Html.TextBoxFor(p => p.TBLKITAP.kitap_ad, new { @class = "form-control" });
+    <br />
+
+    <label>UYE ADI</label>
+    @Html.TextBoxFor(p => p.TBLUYELER.uye_ad, new { @class = "form-control" })
+    <br />
+
+    <label>PERSONEL</label>
+    @Html.TextBoxFor(p => p.TBLPERSONEL.personel_bilgi, new { @class = "form-control" })
+    <br />
+
+    <label>ALIŞ TARİHİ</label>
+    @Html.TextBoxFor(p => p.hareket_alistarih, new { @class = "form-control" })
+    <br />
+
+    <label>EN SON İADE TARİHİ</label>
+    @Html.TextBoxFor(p => p.hareket_iadetarih, new { @class = "form-control" })
+    <br />
+
+    <label>KİTAP DURUMU</label>
+    @Html.TextBoxFor(p => p.TBLKITAP.kitap_durum, new { @class = "form-control" })
+    <br />
+
+
+    <label style="padding:8px 14px 10px 8px">Üyenin getirdiği tarih</label>
+    <input type="text" name="hareket_uyeningetirdigitarih" class="form-control" value="@DateTime.Now.ToShortDateString()" />
+    <br />
+    <button class="btn btn-warning">ÖDÜNÇ KİTABI İADE AL</button>
+}
+

@@ -1,0 +1,40 @@
+﻿@using MvcKutuphaneProjesi.Models.Entity
+@model List<TBLHAREKET>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>İADESİ ALINAN KİTAP LİSTESİ</h2>
+<table class="table table-bordered">
+
+    <tr>
+        <th>ISLEM ID</th>
+        <th>KİTAP AD</th>
+        <th>UYE ADI</th>
+        <th>PERSONEL</th>
+        <th>ALIŞ TARİHİ</th>
+        <th>ÜYENİN GETİRDİĞİ TARİH</th>
+        <th>KİTAP DURUM</th>
+        <th>KİTAP BİLGİSİ</th>
+
+    </tr>
+
+
+
+    @foreach (var h in Model)
+    {
+        <tr>
+            <td>@h.hareket_id</td>
+            <td>@h.TBLKITAP.kitap_ad</td>
+            <td>@h.TBLUYELER.uye_ad</td>
+            <td>@h.TBLPERSONEL.personel_bilgi</td>
+            <td>@h.hareket_alistarih</td>
+            <td>@h.hareket_uyeningetirdigitarih</td>
+            <td>@h.TBLKITAP.kitap_durum</td>
+            <td><a href="/Odunc/Odunciade/@h.hareket_id" class="btn btn-danger">DETAYLAR</a></td>
+
+        </tr>
+    }
+
+</table>

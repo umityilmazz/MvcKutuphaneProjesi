@@ -1,0 +1,33 @@
+﻿@model MvcKutuphaneProjesi.Models.Entity.TBLUYELER
+@{
+    ViewBag.Title = "Guncelle";
+    Layout = "~/Views/Shared/KullaniciLayout.cshtml";
+}
+
+
+
+@using (Html.BeginForm("Guncelle", "PanelOgrenci", FormMethod.Post))
+{
+<label style="font-size: 25px; font-family: 'Times New Roman'; color: #f8b739" class="font-weight-bold" for="Email">Email </label>
+@Html.TextBoxFor(x => x.uye_mail, new { @class = "form-control" })
+<label style="font-size: 25px; font-family: 'Times New Roman'; color: #f8b739" class="font-weight-bold" for="kullanici">Kullanıcı Adı </label>
+@Html.TextBoxFor(x => x.uye_kullaniciadi, new { @class = "form-control" })
+
+<label style="font-size: 25px; font-family: 'Times New Roman'; color: #f8b739" class="font-weight-bold" for="sifre">Şifre </label>
+@Html.TextBoxFor(x => x.uye_sifre, new { @class = "form-control" })
+
+<label style="font-size: 25px; font-family: 'Times New Roman'; color: #f8b739" class="font-weight-bold" for="ad">Ad </label>
+@Html.TextBoxFor(x => x.uye_ad, new { @class = "form-control" })
+
+<label style="font-size: 25px; font-family: 'Times New Roman'; color: #f8b739" class="font-weight-bold" for="soyad">Soyad </label>
+@Html.TextBoxFor(x => x.uye_soyad, new { @class = "form-control" })
+
+<label style="font-size: 25px; font-family: 'Times New Roman'; color: #f8b739" class="font-weight-bold" for="foto">Foto </label>
+@Html.TextBoxFor(x => x.uye_fotograf, new { @class = "form-control" })
+
+<label style="font-size: 25px; font-family: 'Times New Roman'; color: #f8b739" class="font-weight-bold" for="okul">Okul </label>
+@Html.TextBoxFor(x => x.uye_okul, new { @class = "form-control" })
+<br />
+<button class="btn btn-warning">Güncelle</button>}
+
+

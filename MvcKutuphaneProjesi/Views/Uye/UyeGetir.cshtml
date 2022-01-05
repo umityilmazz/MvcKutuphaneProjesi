@@ -1,0 +1,29 @@
+﻿@model MvcKutuphaneProjesi.Models.Entity.TBLUYELER
+@{
+    ViewBag.Title = "UyeGetir";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@using (Html.BeginForm("UyeGuncelle", "Uye", FormMethod.Post))
+{
+    <div style="margin-top:15px"></div>
+    <label style="margin-bottom:15px;margin-top:15px">Üye AD</label>
+    @Html.TextBoxFor(u => u.uye_ad, new { @class = "form-control" })
+
+    <label style="margin-top:15px">Üye SOYAD</label>
+    @Html.TextBoxFor(u => u.uye_soyad, new { @class = "form-control" })
+
+    <label style="margin-top:15px">Üye MAİL</label>
+    @Html.TextBoxFor(u => u.uye_mail, new { @class = "form-control" })
+
+    <label style="margin-top:15px"> Üye KULLANICI ADI</label>
+    @Html.TextBoxFor(u => u.uye_kullaniciadi, new { @class = "form-control" })
+
+    <label style="margin-top:15px"> Üye ŞİFRE</label>
+    @Html.TextBoxFor(u => u.uye_sifre, new { @class = "form-control" })
+
+    <label style="margin-top:15px"> Üye TELOFON</label>
+    @Html.TextBoxFor(u => u.uye_telofon, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-warning">Üye Bilgilerini Güncelle</button>
+}

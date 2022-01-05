@@ -1,0 +1,29 @@
+﻿@using MvcKutuphaneProjesi.Models.Entity
+@model List<TBLPERSONEL>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>  PERSONEL ID  </th>
+        <th>  PERSONEL AD  </th>
+        <th>  SİL  </th>
+        <th>  GÜNCELLE  </th>
+    </tr>
+    <br />
+
+    @foreach (var prs in Model)
+    {
+        <tr>
+            <td>@prs.personel_id</td>
+            <td>@prs.personel_bilgi</td>
+            <td><a href="/Personel/PersonelSil/@prs.personel_id" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Personel/PersonelGetir/@prs.personel_id" class="btn btn-success">Güncelle</a></td>
+
+        </tr>
+    }
+</table>
+<a href="/Personel/PersonelEkle/" class="btn btn-warning">Personel Ekle</a>
+
